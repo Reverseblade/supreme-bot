@@ -1,0 +1,6 @@
+.git
+venv
+chromedriver
+__pycache__/
+config.py
+.vscode/
