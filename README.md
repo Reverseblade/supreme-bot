@@ -4,7 +4,7 @@
 # Usage
 
 ## Requirements
-python3
+Python3
 
 ## Download Chromedriver
 Chromedriver [Downloads](https://chromedriver.chromium.org/downloads)
@@ -17,7 +17,7 @@ Chromedriver [Downloads](https://chromedriver.chromium.org/downloads)
 ```
 cp config.sample config.py
 
-*make sure to add **full path** of your chromedriver in config.py
+* make sure to put a full path of your chromedriver in your config.py
 ```
 
 ## Run
