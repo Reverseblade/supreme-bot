@@ -38,7 +38,7 @@ class Task:
             if product['size'] is not None:
                 product_page.select_size(product['size'])
             product_page.add_to_cart()
-            sleep(ADD_TO_CART_DELARY)
+            sleep(ADD_TO_CART_DELAY)
 
             if i == len(self.products) - 1:
                 product_page.checkout()
