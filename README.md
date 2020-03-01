@@ -1,0 +1,24 @@
+# supreme-bot
+![Demo](https://raw.githubusercontent.com/wiki/Reverseblade/supreme-bot/images/supreme_bot.gif)
+
+# Usage
+
+## Requirements
+python3
+
+## Download Chromedriver
+Chromedriver [Downloads](https://chromedriver.chromium.org/downloads)
+
+## Install Dependencies
+`pip3 install -r requirements.txt`
+
+
+## Tweak Settings
+```
+cp config.sample config.py
+
+*make sure to add **full path** of your chromedriver in config.py
+```
+
+## Run
+`python3 app.py`
