@@ -1,5 +1,4 @@
 from multiprocessing import Pool
-import multiprocessing
 import multiprocessing as multi
 import time
 import datetime
