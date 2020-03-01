@@ -17,7 +17,7 @@ Chromedriver [Downloads](https://chromedriver.chromium.org/downloads)
 ```
 cp config.sample config.py
 
-* make sure to put a full path of your chromedriver in your config.py
+* make sure to put a full path of your chromedriver in config.py
 ```
 
 ## Run
