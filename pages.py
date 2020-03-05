@@ -37,7 +37,7 @@ class ShopPage(BasePage):
 
 class ShopAllPage(BasePage):
     def __init__(self, driver):
-        super().__init__(driver=driver)
+        super().__init__(driver=driver, url='https://www.supremenewyork.com/shop/all')
 
     def click_product(self, href):
         locator = (By.XPATH, '//a[@href="' + href + '"]')

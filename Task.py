@@ -20,17 +20,19 @@ class Task:
         option = Options()
 
         if PROXY:
-            option.add_argument('--proxy-server=http://%s' % self.proxy)
+            option.add_argument('--proxy-server=http://%s' % PROXY)
 
         driver = webdriver.Chrome(executable_path=CHROME_DRIVER_PATH, options=option)
         driver.set_window_position(self.window_position_x, self.window_position_y)
         driver.set_window_size(self.window_width, self.window_height)
 
-        shop_page = ShopPage(driver)
-        shop_page.open()
-        shop_page.shop_all()
+        # shop_page = ShopPage(driver)
+        # shop_page.open()
+        # shop_page.shop_all()
+        # shop_all_page = ShopAllPage(shop_page.driver)
 
-        shop_all_page = ShopAllPage(shop_page.driver)
+        shop_all_page = ShopAllPage(driver)
+        shop_all_page.open()
 
         for i, product in enumerate(self.products):
             shop_all_page.click_product(product['href'])
@@ -50,6 +52,5 @@ class Task:
                 product_page.shop_all()
                 shop_all_page = ShopAllPage(product_page.driver)
 
-        # 手動調整用の時間
-        sleep(9999)
+        sleep(MANUAL_ADJUSTMENT_TIME)
 
