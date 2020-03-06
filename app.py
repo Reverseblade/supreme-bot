@@ -2,19 +2,24 @@ from multiprocessing import Pool
 import multiprocessing as multi
 import time
 import datetime
+import logging
 
 from Task import Task
 from config import PRODUCT_LIST, MULTI_PROCESS_COUNT
 
+formatter = '%(asctime)s: %(message)s'
+filename = 'logs/main.log'
+logging.basicConfig(level=logging.INFO, filename=filename, format=formatter)
+
 def handle_task(process_count):
-    print("Process " + str(process_count + 1) + " started")
+    logging.info('Process ' + str(process_count + 1) + ' started')
     task = Task(PRODUCT_LIST, process_count)
     task.run()
-    print("Process " + str(process_count + 1) + " finished")
+    logging.info('Process ' + str(process_count + 1) + ' finished')
 
 def main():
     now = datetime.datetime.now()
-    print("Supreme Bot started at " + str(now.strftime("%Y-%m-%d %H:%M:%S")))
+    logging.info('Supreme Bot is running...')
 
     start = time.perf_counter()
 
@@ -23,7 +28,7 @@ def main():
     p.close()
 
     finish = time.perf_counter()
-    print(f'Job finsiehd in {round(finish-start, 2)} second(s).')
+    logging.info(f'Supreme Bot finsiehd in {round(finish-start, 2)} second(s).')
 
 if __name__ == "__main__":
     main()
