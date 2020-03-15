@@ -45,3 +45,43 @@ class CheckoutPageLocator:
     card_year_select_box = (By.XPATH, '//*[@id="credit_card_year"]')
     agreement_check_box = (By.XPATH, '//*[@id="order_terms"]')
     process_payment = (By.XPATH, '//*[@id="pay"]/input')
+
+class MobilePageLocator:
+    def __init__(self):
+        pass
+
+    accesories = (By.XPATH, '//*[@id="accessories-category"]')
+    bags = (By.XPATH, '//*[@id="bags-category"]')
+
+class MobileCategoryPageLocator:
+    def __init__(self):
+        pass
+
+    def get_product_locator(product_name):
+        return (By.XPATH, '//span[contains(text(), "' + product_name + '")]')
+
+class MobileProductPageLocator:
+    def __init__(self):
+        pass
+    add_to_cart_btn = (By.XPATH, '//*[@id="cart-update"]/span')
+    checkout_btn = (By.XPATH, '//*[@id="checkout-now"]/span')
+
+class MobileCheckoutPageLocator:
+    def __init__(self):
+        pass
+
+    name = (By.XPATH, '//*[@id="order_billing_name"]')
+    email = (By.XPATH, '//*[@id="order_email"]')
+    phone_number = (By.XPATH, '//*[@id="order_tel"]')
+    zip_code = (By.XPATH, '//*[@id="order_billing_zip"]')
+    billing_state = (By.XPATH, '//*[@id="order_billing_state"]')
+    billing_city = (By.XPATH, '//*[@id="order_billing_city"]')
+    billing_address = (By.XPATH, '//*[@id="order_billing_address"]')
+    store_address_check_box = (By.XPATH, '//*[@id="remember_address_label"]')
+    card_type_select_box = (By.XPATH, '//*[@id="credit_card_type"]')
+    card_number = (By.XPATH, '//*[@id="credit_card_n"]')
+    card_cvv = (By.XPATH, '//*[@id="credit_card_cvv"]')
+    card_month_select_box = (By.XPATH, '//*[@id="credit_card_month"]')
+    card_year_select_box = (By.XPATH, '//*[@id="credit_card_year"]')
+    agreement_check_box = (By.XPATH, '//*[@id="order_terms"]')
+    process_payment = (By.XPATH, '//*[@id="submit_button"]')
